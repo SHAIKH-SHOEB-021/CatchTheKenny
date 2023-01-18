@@ -64,7 +64,7 @@ class ViewController: UIViewController {
         let recognizer7 = UITapGestureRecognizer(target: self, action: #selector(increaseScore))
         let recognizer8 = UITapGestureRecognizer(target: self, action: #selector(increaseScore))
         let recognizer9 = UITapGestureRecognizer(target: self, action: #selector(increaseScore))
-
+        
         kenny1.addGestureRecognizer(recognizer1)
         kenny2.addGestureRecognizer(recognizer2)
         kenny3.addGestureRecognizer(recognizer3)
@@ -74,7 +74,7 @@ class ViewController: UIViewController {
         kenny7.addGestureRecognizer(recognizer7)
         kenny8.addGestureRecognizer(recognizer8)
         kenny9.addGestureRecognizer(recognizer9)
-
+        
         kennyArray = [kenny1, kenny2, kenny3, kenny4, kenny5, kenny6, kenny7, kenny8, kenny9]
         
         //Timer Code Here
@@ -84,7 +84,7 @@ class ViewController: UIViewController {
         hideTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(hidekenny), userInfo: nil, repeats: true)
         hidekenny()
     }
-
+    
     @objc func hidekenny(){
         for kenny in kennyArray {
             kenny.isHidden = true
@@ -135,6 +135,6 @@ class ViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
         }
     }
-
+    
 }
 

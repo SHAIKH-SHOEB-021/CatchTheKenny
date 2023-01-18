@@ -117,8 +117,11 @@ class ViewController: UIViewController {
             }
             
             let alert = UIAlertController(title: "Time's Up", message: "Do You Want To Play Again ?", preferredStyle: UIAlertController.Style.alert)
-            let okBTN = UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil)
-            let replayBTN = UIAlertAction(title: "Replay", style: UIAlertAction.Style.default) { (UIAlertAction) in
+            let okBTN = UIAlertAction(title: "No", style: UIAlertAction.Style.cancel){ (UIAlertAction) in
+                //Exit
+                exit(0)
+            }
+            let replayBTN = UIAlertAction(title: "Yes", style: UIAlertAction.Style.default) { (UIAlertAction) in
                 //Replay Function Here
                 self.score = 0
                 self.scoreLBL.text = "Score : \(self.score)"
